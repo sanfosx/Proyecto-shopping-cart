@@ -5,10 +5,10 @@ import Hero from './Hero';
 import ContentMain from '../util/structure/ContentMain';
 import ColumnLeft from '../util/structure/ColumnLeft';
 import ColumnRight from '../util/structure/ColumnRight';
-
+import Footer from '../home/Footer'
+import Social from '../util/Social';
 
 const Home = () => {
-
   /*const USER = JSON.parse(localStorage.getItem("USER"));
   let showUser = false;*/
 
@@ -16,22 +16,21 @@ const Home = () => {
     <ContentHome>
       <ContentMain>
         <ColumnLeft >
-          <Hero  ancho = {'200px'} alto = {'200px'}/>
+          <Hero anchoIcon={'200px'} altoIcon={'200px'} />
         </ColumnLeft>
-        <ColumnRight social={true}>
+        <ColumnRight>
           <Menu />
         </ColumnRight >
+        <Social/>
+        <Footer />
       </ContentMain>
     </ContentHome>
   )
 }
-
 export default Home
 
 const ContentHome = styled.div`
   
-
-
 `
 
 

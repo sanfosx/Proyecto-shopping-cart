@@ -3,6 +3,7 @@ import { FaFacebook, FaTwitter, FaInstagram, FaYoutube, FaLinkedin, FaSnapchat }
 import styled from 'styled-components';
 
 const Social = () => {
+    
     return (
         <ContentSocial className="social  w-100">
             <p className='col-white text-center'>Seguinos en </p>
@@ -17,20 +18,19 @@ const Social = () => {
         </ContentSocial>
     )
 }
-
 export default Social
 
 const ContentSocial = styled.div`
-
+    margin-bottom: 5px;
     .social {
         display: flex;
         flex-direction:column;
         align-items:center;
         justify-content:center;
     }
-  .fa{
+    .fa{
       padding: 2px 20px;
-      font-size: 25px;
+      font-size: 35px;
       width: 40px;
       color:white;
       text-align: center;
@@ -40,7 +40,6 @@ const ContentSocial = styled.div`
           color:#fc4b08;
       }
    }
-
    p{
     margin:0;
    }

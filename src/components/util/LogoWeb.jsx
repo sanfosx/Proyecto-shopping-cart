@@ -1,13 +1,13 @@
 import React from 'react'
 
 const LogoWeb = () => {
+
   return (
     <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
       width="256.000000pt" height="216.000000pt" viewBox="0 0 256.000000 216.000000"
       preserveAspectRatio="xMidYMid meet" >
       <g transform="translate(0.000000,216.000000) scale(0.100000,-0.100000)"
       fill="#fffff" stroke="none">
-        
       <path d="M1695 2128 c-19 -18 -68 -87 -109 -152 -62 -101 -72 -122 -63 -138
       24 -37 54 -17 142 97 21 28 55 68 76 90 51 54 71 93 58 117 -16 30 -64 23
       -104 -14z"/>
@@ -49,5 +49,4 @@ const LogoWeb = () => {
       </svg>
   )
 }
-
 export default LogoWeb

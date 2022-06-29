@@ -9,7 +9,7 @@ export default function ButtonsMenu({
   titleAlt,
   icon,
   colorIcon,
-  bgColor
+  bgColor,
 }) {
   return (
       <DivInicio alto={alto} ancho={ancho} title={title} titleAlt={titleAlt} icon={icon} colorIcon={colorIcon} bgColor={bgColor} className="btn btn-primary text-center container-fluid">

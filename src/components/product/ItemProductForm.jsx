@@ -5,5 +5,4 @@ const ItemProductForm = () => {
     <div>ItemProductForm</div>
   )
 }
-
 export default ItemProductForm

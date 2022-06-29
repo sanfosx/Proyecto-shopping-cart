@@ -1,14 +1,13 @@
-import  { React, useContext, useState } from 'react'
+import { React, useContext, useState } from 'react'
 import { AppContext } from '../../contexts/CartContext'
 import styled from 'styled-components'
 
 const ItemProduct = (props) => {
   const [state, setState] = useContext(AppContext)
   const [cant, setCant] = useState(1)
-
+  
   const existInCart = (id) => {
     const idx = state.findIndex((e) => e.id === id)
-
     if (idx === -1) {
       return true
     } else return false
@@ -37,11 +36,10 @@ const ItemProduct = (props) => {
   }
 
   return (
-    <Content className='w-90 btn btn-primary m-1'>
+    <Content className="btn btn-primary m-1 p-3  text-center">
+      <img src={props.data.img} alt="algo" className="d-block mx-auto mb-4" width="72" height="57" />
       <h1>{props.data.name}</h1>
-      <img src={props.data.img} alt="algo" />
       <h2>Precio: $ {props.data.price}</h2>
-
       {showButtons &&
         <div className=' '>
           <p>Cantidad: </p><button onClick={() => decrement()}>-</button> {cant} <button onClick={() => increment()}>+</button>
@@ -50,17 +48,15 @@ const ItemProduct = (props) => {
           <button className='btn btn-info' onClick={() => addToCart(props.data)}>Agregar</button>
         </div>
       }
-
       {!showButtons &&
         <p>Agregado al carrito</p>
       }
     </Content>
   )
 }
-
 export default ItemProduct
 
 const Content = styled.div`
-
-width: 100vh;
+  max-width:500px;
+  display:grid;
 `

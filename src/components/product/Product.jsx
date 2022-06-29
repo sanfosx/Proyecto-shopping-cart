@@ -7,6 +7,7 @@ import ColumnRight from '../util/structure/ColumnRight';
 import ContentMain from '../util/structure/ContentMain';
 import ItemProduct from './ItemProduct';
 import styled from 'styled-components';
+import IconMenu from '../util/menu/IconMenu';
 
 const Products = () => {
   const [state] = useContext(AppContext);
@@ -17,27 +18,7 @@ const Products = () => {
 
     <ContentMain>
 
-      <ColumnLeft>
-        <Menu/>
-      </ColumnLeft>
-
-      <ColumnRight >
-      <h1>Productos</h1>
-        <ContentProduct className='scrollb w-100'>
-         
-          {Data.map((dato, idx) => (
-            <div className='w-100' key={idx}>
-              <ItemProduct data={dato} />
-            </div>
-          ))}
-
-          {state.map((dato, idx) => (
-            <div className="card m-1 " key={idx}>
-              {dato.name}
-            </div>
-          ))}
-        </ContentProduct>
-      </ColumnRight>
+     <IconMenu/>
 
     </ContentMain>
   )
@@ -47,9 +28,5 @@ export default Products
 
 
 const ContentProduct = styled.div`
-
-height:70vh;
-
-
-
+height:85vh;
 `

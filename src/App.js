@@ -9,7 +9,7 @@ import ShoppingCart from "./components/shoppingCart/ShoppingCart";
 import Login from './components/home/Login'
 import Register from './components/home/Register'
 import { AuthProvider } from "./contexts/AuthContext";
-import HomeUser from "./components/home/HomeUser";
+import Prod from "./components/product/Prod";
 
 const App = () => (
   <CartProvider>
@@ -17,18 +17,16 @@ const App = () => (
       <DivApp >
         <Routes>
           <Route path='/' element={<Home/>}/>
-          <Route path='/home' element={<HomeUser/>}/>
-
           <Route path='/cart' element={<ShoppingCart/>}/>
           <Route path='/product' element={<Product/>}/>
           <Route path='/login' element={<Login/>}/>
           <Route path='/register' element={<Register/>}/>
+          <Route path='/prod' element={<Prod/>}/>
         </Routes>
       </DivApp>
     </AuthProvider>
   </CartProvider>
-);
-
+)
 export default App;
 
 const DivApp= styled.div`
@@ -40,10 +38,7 @@ const DivApp= styled.div`
   background-size:100%;
   height:100vh;
   padding:20px;
-
   @media (max-width: 990px) {
     height:100%
   }
-
-
 `;
