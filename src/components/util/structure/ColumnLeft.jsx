@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import VerticalLine from '../VerticalLine'
 
 const ColumnLeft = ({ children }) => {
     return (
@@ -24,9 +23,7 @@ const ContentLeft = styled.div`
     align-content:center;
     justify-content:center;
     width:100%;
-
     .scrollb{
-       
         overflow: auto;
         &::-webkit-scrollbar{
             width: 5px;
@@ -44,7 +41,6 @@ const ContentLeft = styled.div`
       align-self:center;
       justify-self:center;
       max-height:90vh;
-
       @media (min-width: 290px) {
         max-height:100vh;
       }
@@ -64,7 +60,6 @@ const ContentLeft = styled.div`
             color:#fc4b08;
         }
     }
-
     .btn-purchase{
         background-color:black;
         box-shadow: rgba(252, 75, 8, 0.2) 0px 7px 29px 8px;

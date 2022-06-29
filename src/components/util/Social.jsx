@@ -30,7 +30,7 @@ const ContentSocial = styled.div`
     }
     .fa{
       padding: 2px 20px;
-      font-size: 35px;
+      font-size: 30px;
       width: 40px;
       color:white;
       text-align: center;

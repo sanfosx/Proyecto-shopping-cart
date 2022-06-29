@@ -10,25 +10,25 @@ const Menu = (props) => {
     const navigate = useNavigate()
 
     return (
-        <ContentMenu className='d-flex flex-col  card mb-3 px-2 py-3 text-center align-items-center'>
-            <h1 className='pt-1 col-white'>Nuestro Menu</h1>
+        <ContentMenu className='d-flex flex-col card mb-3 px-2 py-3 text-center align-items-center'>
+            <h1 className='pt-1 color-white'>Nuestro Menu</h1>
             <div className="d-flex  align-items-strech mt-4 ">
-                <div onClick={() => navigate('/prod')}>
+                <div onClick={() => navigate('/product')}>
                     <ButtonsMenu
                         ancho={'150px'}
                         alto={'150px'}
-                        title={<h2 className='col-white'>Promos</h2>}
+                        title={<h2 className='color-white'>Promos</h2>}
                         colorIcon={'black'}
                         bgColor={'#fc4b08'}
                         icon={<MdOutlineLocalOffer />} />
                 </div>
 
                 <div className='m-4'></div>
-                <div onClick={() => navigate('/prod')}>
+                <div onClick={() => navigate('/product')}>
                     <ButtonsMenu
                         ancho={'150px'}
                         alto={'150px'}
-                        title={<h2 className='col-white'>Comidas</h2>}
+                        title={<h2 className='color-white'>Comidas</h2>}
                         colorIcon={'#fc4b08'}
                         bgColor={''}
                         icon={<FaHamburger />} />
@@ -36,21 +36,21 @@ const Menu = (props) => {
 
             </div>
             <div className="d-flex justify-content-center align-items-strech mt-4  ">
-                <div onClick={() => navigate('/prod')}>
+                <div onClick={() => navigate('/product')}>
                     <ButtonsMenu
                         ancho={'150px'}
                         alto={'150px'}
-                        title={<h2 className='col-white'>Bebidas</h2>}
+                        title={<h2 className='color-white'>Bebidas</h2>}
                         colorIcon={'#fc4b08'}
                         bgColor={''}
                         icon={<GiDrinkMe />} />
                 </div>
                 <div className='m-4'></div>
-                <div onClick={() => navigate('/prod')}>
+                <div onClick={() => navigate('/product')}>
                     <ButtonsMenu
                         ancho={'150px'}
                         alto={'150px'}
-                        title={<h2 className='col-white'>Postres</h2>}
+                        title={<h2 className='color-white'>Postres</h2>}
                         colorIcon={'#fc4b08'}
                         bgColor={''}
                         icon={<GiWrappedSweet

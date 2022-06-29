@@ -17,7 +17,7 @@ const Hero = ({ login = false, anchoIcon = '100px', altoIcon = '100px' }) => {
             {!USER[0]
                 ?
                 <>
-                 <p className="lead mx-2 ">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+                 <p className="lead mx-2 ">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit.</p>
                 {!login
                     ?
                     <button type="button" className="btn btn-primary btn-lg color-black mt-4" onClick={() => navigate('/login')}>Iniciar Sesion</button>

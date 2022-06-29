@@ -4,8 +4,8 @@ import styled from 'styled-components'
 const ContentMain = ({ children }) => {
     
     return (
-        <Content className="container-fluid bg-dark btn content-home">
-            <div className="row  g-lg-6 d-flex flex-wrap justify-content-center align-items-center scrollb">
+        <Content className="container-fluid bg-dark btn">
+            <div className="row g-lg-6 d-flex flex-wrap justify-content-center align-items-center scrollb">
                 {children}
             </div>
         </Content>
@@ -17,4 +17,9 @@ const Content = styled.div`
   background-color:black;
   align-items:center;
   justify-content:center;
+  &:hover{
+    cursor:default;
+  }
+
+
 `

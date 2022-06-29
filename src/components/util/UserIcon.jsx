@@ -11,20 +11,18 @@ const UserIcon = () => {
 
     return (
         <ContentUserIcon className="social  w-100">
-            <i className='fa mx-1' data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on bottom" onClick={() => navigate('/cart')}><BsFileEarmarkPersonFill /></i>
+            <i className='fa mx-1' onClick={() => navigate('/cart')}><BsFileEarmarkPersonFill /></i>
             <i className='fa mx-1' onClick={() => navigate('/cart')}><BsCart3 /></i>
             <i className='fa mx-1' onClick={() => navigate('/cart')}><BsFillSuitHeartFill /></i>
             <i className='fa mx-1' onClick={() => navigate('/cart')}><BsFillFileEarmarkTextFill /></i>
             <i className='fa mx-1' onClick={() => logout()}><AiOutlinePoweroff /></i>
-
         </ContentUserIcon>
     )
 }
-
 export default UserIcon
 
 const ContentUserIcon = styled.div`
-     margin-bottom: 5px;
+    margin-bottom: 5px;
     .social {
         display: flex;
         flex-direction:column;

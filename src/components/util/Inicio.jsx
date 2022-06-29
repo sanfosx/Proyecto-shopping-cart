@@ -3,14 +3,12 @@ import styled from 'styled-components'
 import LogoWeb from './LogoWeb';
 
 export default function Inicio({
-  children,
   alto,
   ancho,
-  sizeTitle,
   title,
   titleAlt,
-  logo,
 }) {
+  
   return (
       <DivInicio alto={alto} ancho={ancho} title={title} titleAlt={titleAlt} className="btn btn-primary text-center container-fluid">
         <LogoWeb/>

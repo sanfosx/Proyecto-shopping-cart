@@ -4,12 +4,13 @@ import CartProvider from "./contexts/CartContext";
 import Home from "./components/home/Home";
 import styled from "styled-components";
 import Images from '../src/assets/images.jsx'
-import Product from '../src/components/product/Product'
 import ShoppingCart from "./components/shoppingCart/ShoppingCart";
 import Login from './components/home/Login'
 import Register from './components/home/Register'
 import { AuthProvider } from "./contexts/AuthContext";
-import Prod from "./components/product/Prod";
+import Product from "./components/product/Product";
+import User from './components/user/User.jsx'
+import Purchase from "./components/Purchase";
 
 const App = () => (
   <CartProvider>
@@ -18,10 +19,13 @@ const App = () => (
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/cart' element={<ShoppingCart/>}/>
-          <Route path='/product' element={<Product/>}/>
           <Route path='/login' element={<Login/>}/>
           <Route path='/register' element={<Register/>}/>
-          <Route path='/prod' element={<Prod/>}/>
+          <Route path='/product' element={<Product/>}/>
+          <Route path='/purchase' element={<Purchase/>}/>
+          <Route path='/user' element={<User/>}/>
+          <Route path='/favorites' element={<User/>}/>
+          <Route path='/orders' element={<User/>}/>
         </Routes>
       </DivApp>
     </AuthProvider>

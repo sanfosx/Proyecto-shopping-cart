@@ -18,9 +18,7 @@ const NavBar = () => {
     const { logout } = useAuth()
     const USER = useState( localStorage.getItem("USER") ? JSON.parse(localStorage.getItem("USER")): ('')) 
    
-
     const calCant = () => {
-
         let totCant = 0
         state.forEach(e => {
             totCant = totCant + e.cant
@@ -41,15 +39,15 @@ const NavBar = () => {
                             placement="end">
                             <Offcanvas.Header closeButton>
                                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                                    Offcanvas
+                                    Resto Bar
                                 </Offcanvas.Title>
                             </Offcanvas.Header>
                             <Offcanvas.Body>
                                 <Nav className="justify-content-start flex-grow-1 pe-3 drop">
-                                    <Nav.Link href="/prod">Promos</Nav.Link>
-                                    <Nav.Link href="/prod">Comidas</Nav.Link>
-                                    <Nav.Link href="/prod">Bebidas</Nav.Link>
-                                    <Nav.Link href="/prod">Postres</Nav.Link>
+                                    <Nav.Link  href="/product"><p className='nav-menu'>Promos</p></Nav.Link>
+                                    <Nav.Link  href="/product"><p className='nav-menu'>Comidas</p></Nav.Link>
+                                    <Nav.Link  href="/product"><p className='nav-menu'>Bebidas</p></Nav.Link>
+                                    <Nav.Link  href="/product"><p className='nav-menu'>Postres</p></Nav.Link>
                                 </Nav>
                                 {USER[0].name &&
                                 <div className="d-flex">
@@ -79,7 +77,6 @@ const NavBar = () => {
                                             </span>
                                         </Button>
                                     }
-                                    
                                 </div>
                                     }
                             </Offcanvas.Body>
@@ -93,6 +90,18 @@ const NavBar = () => {
 export default NavBar;
 
 const Content = styled.div`   
+
+    .nav-menu{
+        &:hover{
+            color:#fc4b08;
+            text-decoration:overline;
+        }
+    }
+    .nav-link{
+        &:hover{
+            color:#fc4b08
+        }
+    }
     .drop{
         font-size:30px;
     }
