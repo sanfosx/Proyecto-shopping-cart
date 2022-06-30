@@ -14,12 +14,9 @@ const ContentMain = ({ children }) => {
 export default ContentMain
 
 const Content = styled.div`
-  background-color:black;
   align-items:center;
   justify-content:center;
   &:hover{
     cursor:default;
   }
-
-
 `

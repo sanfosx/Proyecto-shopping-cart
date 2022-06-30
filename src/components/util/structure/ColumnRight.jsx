@@ -55,14 +55,7 @@ const HomeContent = styled.div`
             margin:1px;
         }
    }
-    .column-left {
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      align-self:center;
-      justify-self:center;
-      max-height:80vh;
-    }
+   
     .color-black{
        background-color:black;
        box-shadow: rgba(252, 75, 8, 0.2) 0px 7px 29px 8px;

@@ -59,4 +59,7 @@ export default ItemProduct
 const Content = styled.div`
   max-width:500px;
   display:grid;
+  &:hover{
+    cursor:default;
+  }
 `

@@ -13,7 +13,7 @@ import NavBar from '../home/NavBar'
 const Product = (props) => {
     const [state] = useContext(AppContext);
     const navigate = useNavigate()
-    
+
     return (
         <ContentMain>
             <NavBar/>
@@ -45,6 +45,14 @@ const ContentProduct = styled.div`
     &::-webkit-scrollbar-thumb{
         background: #fc4b08;
         margin:1px;
+    }
+
+    &:hover{
+        cursor:default;
+    }
+
+    h1{
+        cursor:default;
     }
 }
 `

@@ -10,9 +10,11 @@ import Footer from '../home/Footer';
 import { BsCart3 } from 'react-icons/bs';
 import styled from 'styled-components';
 import ButtonsMenu from '../util/ButtonsMenu';
+import { useNavigate } from 'react-router-dom';
 
 const ShoppingCart = () => {
     const [state, setState] = useContext(AppContext);
+    const navigate = useNavigate()
 
     const clearCart = () => {
         setState([])
@@ -52,7 +54,7 @@ const ShoppingCart = () => {
                         <h3 className='mt-3 text-white'>Cantidad de productos: {calcCant()}</h3>
                         <h3 className='text-white'>Total a Pagar: $ {calcTotal()}</h3>
                         <button className='btn btn-danger m-1 ' onClick={() => clearCart()}>Vaciar Carrito</button> 
-                        <button className='btn btn-primary btn-purchase m-1 '>Finalizar compra</button>
+                        <button className='btn btn-primary btn-purchase m-1 ' onClick={() => navigate('/purchase')}>Finalizar compra</button>
                         <p></p>
                     </ColumnLeft>
                     
