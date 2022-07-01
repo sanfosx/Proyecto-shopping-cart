@@ -62,13 +62,13 @@ const Login = () => {
   return (
     <ContentMain>
       <ColumnLeft>
-        <Hero login={true} />
+        <Hero anchoIcon = '200px' altoIcon = '200px'login={true} />
       </ColumnLeft>
 
       <ColumnRight social={false}>
         <DivContent className=' container-fluid d-flex align-items-center justify-content-center'>
           <DivLogin>
-            <form className="card color-bg card-body" onSubmit={handleSubmit}>
+            <form className="btn  color-bg w-100 shadow-lg" onSubmit={handleSubmit}>
               <div>
                 <h1 className="text-center display-1 orange">Login</h1>
                 {error && <Alerts message={error} />}
@@ -100,7 +100,7 @@ const Login = () => {
                 />
               </div>
               <p className='text-end '><a href="" className='col-white'>Olvidaste tu password?</a> </p>
-              <button className="btn btn-success btn-block m-3" onClick={handleSubmit}>login</button>
+              <button className="btn btn-success btn-block my-3 w-100" onClick={handleSubmit}>login</button>
               <p></p>
               <p className='text-center col-white'>No tienes una cuenta? Registrate <strong className='orange' onClick={() => navigate('/register')}>Aqui</strong></p>
               <p className='text-center col-white'>ó</p>

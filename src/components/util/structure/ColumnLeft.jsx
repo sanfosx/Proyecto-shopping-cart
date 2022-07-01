@@ -60,8 +60,5 @@ const ContentLeft = styled.div`
             color:#fc4b08;
         }
     }
-    .btn-purchase{
-        background-color:black;
-        box-shadow: rgba(252, 75, 8, 0.2) 0px 7px 29px 8px;
-    }
+   
 `;

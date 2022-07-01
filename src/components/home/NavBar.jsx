@@ -44,10 +44,10 @@ const NavBar = () => {
                             </Offcanvas.Header>
                             <Offcanvas.Body>
                                 <Nav className="justify-content-start flex-grow-1 pe-3 drop">
-                                    <Nav.Link  href="/product"><p className='nav-menu'>Promos</p></Nav.Link>
-                                    <Nav.Link  href="/product"><p className='nav-menu'>Comidas</p></Nav.Link>
-                                    <Nav.Link  href="/product"><p className='nav-menu'>Bebidas</p></Nav.Link>
-                                    <Nav.Link  href="/product"><p className='nav-menu'>Postres</p></Nav.Link>
+                                    <Nav.Link  href="/promos"><p className='nav-menu'>Promos</p></Nav.Link>
+                                    <Nav.Link  href="/comidas"><p className='nav-menu'>Comidas</p></Nav.Link>
+                                    <Nav.Link  href="/bebidas"><p className='nav-menu'>Bebidas</p></Nav.Link>
+                                    <Nav.Link  href="/postres"><p className='nav-menu'>Postres</p></Nav.Link>
                                 </Nav>
                                 {USER[0].name &&
                                 <div className="d-flex">

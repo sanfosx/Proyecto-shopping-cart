@@ -19,4 +19,14 @@ const Content = styled.div`
   &:hover{
     cursor:default;
   }
+
+  .btn-close{
+  font-size: 40px;
+  
+  &:hover{
+    color: red;
+    cursor:pointer;
+  }
+
+}
 `

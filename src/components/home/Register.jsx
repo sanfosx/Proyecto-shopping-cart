@@ -47,13 +47,13 @@ const Register = () => {
     return (
         <ContentMain>
             <ColumnLeft>
-                <Hero login={true} />
+                <Hero anchoIcon = '200px' altoIcon = '200px' login={true} />
             </ColumnLeft>
 
             <ColumnRight>
-                <ContentRegister>
-                    <form className="card-body color-bg" onSubmit={handleSubmit}>
-                        <h1 className="text-center display-1">Register</h1>
+                <ContentRegister className='container-fluid'>
+                    <form className="btn color-bg w-100 shadow-lg py-3 px-5" onSubmit={handleSubmit}>
+                        <h1 className="text-center display-1">Registro</h1>
                         {error && <Alerts message={error} />}
                         <div className="form-group input-group p-3">
                             <div className="input-group-text bg-light">

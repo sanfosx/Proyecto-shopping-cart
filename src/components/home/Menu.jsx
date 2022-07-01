@@ -13,7 +13,7 @@ const Menu = (props) => {
         <ContentMenu className='d-flex flex-col card mb-3 px-2 py-3 text-center align-items-center'>
             <h1 className='pt-1 color-white'>Nuestro Menu</h1>
             <div className="d-flex  align-items-strech mt-4 ">
-                <div onClick={() => navigate('/product')}>
+                <div onClick={() => navigate('/promos')}>
                     <ButtonsMenu
                         ancho={'150px'}
                         alto={'150px'}
@@ -24,7 +24,7 @@ const Menu = (props) => {
                 </div>
 
                 <div className='m-4'></div>
-                <div onClick={() => navigate('/product')}>
+                <div onClick={() => navigate('/comidas')}>
                     <ButtonsMenu
                         ancho={'150px'}
                         alto={'150px'}
@@ -36,7 +36,7 @@ const Menu = (props) => {
 
             </div>
             <div className="d-flex justify-content-center align-items-strech mt-4  ">
-                <div onClick={() => navigate('/product')}>
+                <div onClick={() => navigate('/bebidas')}>
                     <ButtonsMenu
                         ancho={'150px'}
                         alto={'150px'}
@@ -46,7 +46,7 @@ const Menu = (props) => {
                         icon={<GiDrinkMe />} />
                 </div>
                 <div className='m-4'></div>
-                <div onClick={() => navigate('/product')}>
+                <div onClick={() => navigate('/postres')}>
                     <ButtonsMenu
                         ancho={'150px'}
                         alto={'150px'}

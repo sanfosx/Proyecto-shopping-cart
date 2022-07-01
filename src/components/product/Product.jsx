@@ -10,7 +10,8 @@ import Social from '../util/Social'
 import Footer from '../home/Footer'
 import NavBar from '../home/NavBar'
 
-const Product = (props) => {
+const Product = ({type}) => {
+    
     const [state] = useContext(AppContext);
     const navigate = useNavigate()
 
@@ -18,7 +19,7 @@ const Product = (props) => {
         <ContentMain>
             <NavBar/>
                 <ContentProduct className=' btn bg-white'>
-                <h1>Promos</h1>
+                <h1>{type}</h1>
                     <div className='d-flex flex-wrap justify-content-center align-items-center scrollb'>
                         {Data.map((dato, idx) => (
                             <div className='m-1 p-1' key={idx}>

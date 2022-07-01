@@ -21,7 +21,10 @@ const App = () => (
           <Route path='/cart' element={<ShoppingCart/>}/>
           <Route path='/login' element={<Login/>}/>
           <Route path='/register' element={<Register/>}/>
-          <Route path='/product' element={<Product/>}/>
+          <Route path='/promos' element={<Product type={'Promos'}/>}/>
+          <Route path='/comidas' element={<Product type={'Comidas'}/>}/>
+          <Route path='/bebidas' element={<Product type={'Bebidas'}/>}/>
+          <Route path='/postres' element={<Product type={'Postres'}/>}/>
           <Route path='/purchase' element={<Purchase/>}/>
           <Route path='/user' element={<User/>}/>
           <Route path='/favorites' element={<User/>}/>
@@ -39,7 +42,10 @@ const DivApp= styled.div`
   align-items:center;
   background-image: url(${Images.backgroundImg});
   background-repeat: no-repeat;
-  background-size:100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   height:100vh;
   padding:20px;
   @media (max-width: 990px) {

@@ -54,7 +54,7 @@ const ShoppingCart = () => {
                         <h3 className='mt-3 text-white'>Cantidad de productos: {calcCant()}</h3>
                         <h3 className='text-white'>Total a Pagar: $ {calcTotal()}</h3>
                         <button className='btn btn-danger m-1 ' onClick={() => clearCart()}>Vaciar Carrito</button> 
-                        <button className='btn btn-primary btn-purchase m-1 ' onClick={() => navigate('/purchase')}>Finalizar compra</button>
+                        <button className='btn btn-primary bg-black shadow-lg btn-lg m-1 ' onClick={() => navigate('/purchase')}>Finalizar compra</button>
                         <p></p>
                     </ColumnLeft>
                     
