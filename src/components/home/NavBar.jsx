@@ -16,8 +16,8 @@ const NavBar = () => {
     const [state, setState] = useContext(AppContext);
     const navigate = useNavigate()
     const { logout } = useAuth()
-    const USER = useState( localStorage.getItem("USER") ? JSON.parse(localStorage.getItem("USER")): ('')) 
-   
+    const USER = useState(localStorage.getItem("USER") ? JSON.parse(localStorage.getItem("USER")) : (''))
+
     const calCant = () => {
         let totCant = 0
         state.forEach(e => {
@@ -25,7 +25,7 @@ const NavBar = () => {
         });
         return totCant
     }
-    
+
     return (
         <Content>
             {['lg'].map((expand) => (
@@ -44,41 +44,46 @@ const NavBar = () => {
                             </Offcanvas.Header>
                             <Offcanvas.Body>
                                 <Nav className="justify-content-start flex-grow-1 pe-3 drop">
-                                    <Nav.Link  href="/promos"><p className='nav-menu'>Promos</p></Nav.Link>
-                                    <Nav.Link  href="/comidas"><p className='nav-menu'>Comidas</p></Nav.Link>
-                                    <Nav.Link  href="/bebidas"><p className='nav-menu'>Bebidas</p></Nav.Link>
-                                    <Nav.Link  href="/postres"><p className='nav-menu'>Postres</p></Nav.Link>
+                                    <Nav.Link href="/promos"><p className='nav-menu'>Promos</p></Nav.Link>
+                                    <Nav.Link href="/comidas"><p className='nav-menu'>Comidas</p></Nav.Link>
+                                    <Nav.Link href="/bebidas"><p className='nav-menu'>Bebidas</p></Nav.Link>
+                                    <Nav.Link href="/postres"><p className='nav-menu'>Postres</p></Nav.Link>
                                 </Nav>
-                                {USER[0].name &&
-                                <div className="d-flex">
-                                    <NavDropdown
-                                        title={USER[0].name}
-                                        id={`offcanvasNavbarDropdown-expand-${expand}`} className='drop'>
-                                        <NavDropdown.Item href="#action3">Mis Datos</NavDropdown.Item>
-                                        <NavDropdown.Item href="/cart">
-                                            Carrito
-                                        </NavDropdown.Item>
-                                        <NavDropdown.Item href="#action4">
-                                            Favoritos
-                                        </NavDropdown.Item>
-                                        <NavDropdown.Item href="#action4">
-                                            Compras
-                                        </NavDropdown.Item>
-                                        <NavDropdown.Divider />
-                                        <NavDropdown.Item href="" onClick={() => logout()}>
-                                            Cerrar Sesion
-                                        </NavDropdown.Item>
-                                    </NavDropdown>
-                                    {calCant() > 0 &&
-                                        <Button className="position-relative btn-cart">
-                                            <i className='fa mx-1' onClick={() => navigate('/cart')}><BsCart3 /></i>
-                                            <span className="position-absolute top-50 start-90 translate-middle p-2 bg-danger border border-light rounded-circle badge">
-                                                {calCant()}<span className="visually-hidden">{calCant()}</span>
-                                            </span>
-                                        </Button>
-                                    }
-                                </div>
-                                    }
+                                {USER[0].name
+                                    ?
+                                    <div className="d-flex">
+                                        <NavDropdown
+                                            title={USER[0].name}
+                                            id={`offcanvasNavbarDropdown-expand-${expand}`} className='drop'>
+                                            <NavDropdown.Item href="#action3">Mis Datos</NavDropdown.Item>
+                                            <NavDropdown.Item href="/cart">
+                                                Carrito
+                                            </NavDropdown.Item>
+                                            <NavDropdown.Item href="#action4">
+                                                Favoritos
+                                            </NavDropdown.Item>
+                                            <NavDropdown.Item href="#action4">
+                                                Compras
+                                            </NavDropdown.Item>
+                                            <NavDropdown.Divider />
+                                            <NavDropdown.Item href="" onClick={() => logout()}>
+                                                Cerrar Sesion
+                                            </NavDropdown.Item>
+                                        </NavDropdown>
+                                        {calCant() > 0 &&
+                                            <Button className="position-relative btn-cart">
+                                                <i className='fa mx-1' onClick={() => navigate('/cart')}><BsCart3 /></i>
+                                                <span className="position-absolute top-50 start-90 translate-middle p-2 bg-danger border border-light rounded-circle badge">
+                                                    {calCant()}<span className="visually-hidden">{calCant()}</span>
+                                                </span>
+                                            </Button>
+                                        }
+                                    </div>
+                                    :
+                                    <div>
+                                         <button type="button" className="btn btn-primary btn-lg bg-color shadow-lg mt-2" onClick={() => navigate('/login')}>Iniciar Sesion</button>
+                                    </div>
+                                }
                             </Offcanvas.Body>
                         </Navbar.Offcanvas>
                     </Container>
@@ -96,6 +101,10 @@ const Content = styled.div`
             color:#fc4b08;
             text-decoration:overline;
         }
+    }
+    .bg-color{
+        background-color:#fc4b08;
+        border-color:#fc4b08;
     }
     .nav-link{
         &:hover{

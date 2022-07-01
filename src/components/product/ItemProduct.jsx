@@ -25,6 +25,7 @@ const ItemProduct = (props) => {
   }
 
   function addToCart(item) {
+    
     console.log(state.length)
     item.cant = cant
     item.tot = cant * item.price
