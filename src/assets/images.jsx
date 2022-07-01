@@ -3,6 +3,7 @@ import favicon from './img/favicon.ico'
 import logo from './img/logo.svg'
 import restoBarIcon from './img/restoBarIcon.png'
 import fondoresto1 from './img/fondoresto1.jpg'
+import burga1 from './img/burga1.jpg'
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
@@ -11,4 +12,5 @@ export default {
     'logo': logo,
     'restoBarIcon': restoBarIcon,
     'fondoResto':fondoresto1,
+    'burga1': burga1,
 }

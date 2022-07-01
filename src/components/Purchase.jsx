@@ -87,7 +87,7 @@ const Purchase = () => {
               <li class="list-group-item d-flex justify-content-between lh-sm" key={idx}>
                 <div>
                   <h6 className="my-0">{dato.name}</h6>
-                  <small className="text-muted">Brief description</small>
+                  <small className="text-muted">{dato.cant} x  ${dato.price}</small>
                 </div>
                 <span className="text-muted">${dato.price * dato.cant}</span>
               </li>

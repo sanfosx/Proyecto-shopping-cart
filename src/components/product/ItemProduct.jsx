@@ -38,7 +38,7 @@ const ItemProduct = (props) => {
 
   return (
     <Content className="btn btn-primary  m-1 p-3  text-center shadow-lg">
-      <img src={props.data.img} alt="algo" className="d-block mx-auto mb-4" width="72" height="57" />
+      <img src={props.data.img} alt="algo" className="d-block mx-auto mb-4" width="200px" height="150px" />
       <h1>{props.data.name}</h1>
       <h2>Precio: $ {props.data.price}</h2>
       {showButtons &&

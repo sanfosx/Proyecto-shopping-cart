@@ -57,6 +57,7 @@ const ItemShoppingCart = (props) => {
             <button onClick={() => increment(props.data)} className='ms-2'>+</button>
           </div>
           <h2 className='mt-2'>Total: $ {props.data.tot} </h2>
+          <button className='btn btn-info' onClick={() => deleteItemCart(props.data.id)}>Borrar</button>
         </div>
       </div>
     </Content>
