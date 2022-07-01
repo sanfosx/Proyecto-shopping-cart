@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Resto Bar App
+![image](https://user-images.githubusercontent.com/13973142/176848914-ce308e9b-69c0-44ec-bfed-c03c852514c6.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+Proyecto creado con React + Firebase  
 
 ## Available Scripts
 
